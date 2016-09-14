@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.mk)
+$(call inherit-product, vendor/samsung/klte-common/klte-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -29,13 +29,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -69,19 +65,11 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd \
     fingerprint.msm8974 \
     ValidityService
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
