@@ -1,22 +1,5 @@
 [
-  {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_display",
-    "target_path": "hardware/qcom/display",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_media",
-    "target_path": "hardware/qcom/media",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_audio",
-    "target_path": "hardware/qcom/audio",
-    "revision": "android-6.0"
-  },{
+{
     "remote": "omnirom",
     "repository": "android_hardware_qcom_display-caf-msm8974",
     "target_path": "hardware/qcom/display-caf-msm8974",
